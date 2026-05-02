@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>REKAP DATA CUSTOMER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /*  */
+    body {
+      background-color: #462202;
+      font-family: Trebuchet MS;
+    }
+    #form-container {
+      width: 500px;
+      margin: 0 auto;
+      background-color: #f1f1f7;
+      border: 2px solid #da0808;
+      border-radius: 10px;
+      padding: 20px;
+    }
+    #form-container h2 {
+      text-align: center;
+      color: #d88406;
+    }
+    #form-container input[type="text"], #form-container input[type="date"], #form-container input[type="tel"], #form-container input[type="number"],#form-container input[type="time"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #f1d0d0;
+      border-radius: 5px;
+    }
+    #form-container input[type="submit"] {
+      background-color: #1E90FF;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    #form-container input[type="submit"]:hover {
+      background-color: #004B8D;
+    }
+    #form-container input[type="submit"]:hover {
+      background-color: #004B8D;
+    }
+    #form-container button[type="edit"] { 
+      background-color: #1E90FF;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+   #form-container button[type="edit"]:hover {
+      background-color: #004B8D;
+    }
+     #form-container button[type="search"] { 
+      background-color: #1E90FF;
+      color: #FFFFFF;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      cursor: pointer;
+    }
+   #form-container button[type="search"]:hover {
+      background-color: #004B8D;
+   }
+    #footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      color: #f7f1f1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="form-container">
+    <h2>REKAP DATA CUSTOMER</h2>
+    <!-- akses link script app -->
+    <form action="https://script.google.com/macros/s/AKfycbzihmikQ-IvFy1i9WL8Y-kmnX78Nbmv-DTCmB9dQHv4Ls2qUJ6noRtazbiApUt5CeY/exec" method="post">
+    <!-- end akses  -->
+
+      <label for="tgl_berangkat">TANGGAL KEBERANGKATAN :</label>
+      <input type="date" id="tgl_berangkat" name="tgl_berangkat" required>
+      <label for="id_booking">ID BOOKING :</label>
+      <input type="text" id="id_booking" name="id_booking" required>
+      <label for="area">AREA :</label>
+      <input type="text" id="area" name="area" required>
+      <label for="nama_tamu">NAMA TAMU :</label>
+      <input type="text" id="nama_tamu" name="nama_tamu" required>
+      <label for="no_hp">NOMOR HANDPHONE :</label>
+      <input type="tel" id="no_hp" name="no_hp" pattern="[0-9]{10,12}" required>
+      <label for="type_kendaraan">TYPE KENDARAAN :</label>
+      <input type="text" id="type_kendaraan" name="type_kendaraan" required>
+      <label for="nama_driver">NAMA DRIVER :</label>
+      <input type="text" id="nama_driver" name="nama_driver" required>
+      <label for="jumlah_hari">JUMLAH HARI :</label>
+      <input type="text" id="jumlah_hari" name="jumlah_hari" required>
+      <label for="keterangan_lokasi">KETERANGAN LOKASI :</label>
+      <input type="text" id="keterangan_lokasi" name="keterangan_lokasi" required>
+      <label for="jumlah_pax">JUMLAH PAX :</label>
+      <input type="text" id="jumlah_pax" name="jumlah_pax" required>
+      <label for="pickup_time">PICKUP TIME :</label>
+      <input type="time" id="pickup_time" name="pickup_time" required>
+      <label for="pickup_location">PICKUP LOCATION :</label>
+      <input type="text" id="pickup_location" name="pickup_location" required>
+      <label for="dropoff_location">DROPOFF LOCATION :</label>
+      <input type="text" id="dropoff_location" name="dropoff_location" required>
+      <label for="total_tagihan">TOTAL TAGIHAN :</label>
+      <input type="number" id="total_tagihan" name="total_tagihan" required>
+      <label for="deposit">DEPOSIT :</label>
+      <input type="number" id="deposit" name="deposit" required>
+      <label for="sisa_tagihan">SISA TAGIHAN :</label>
+      <input type="number" id="sisa_tagihan" name="sisa_tagihan" required>
+      <label for="admin">ADMIN :</label>
+      <input type="text" id="admin" name="admin" required>
+      <label for="keterangan">KETERANGAN :</label>
+      <input type="text" id="keterangan" name="keterangan" required>
+      <input type="submit" value="SIMPAN DATA">
+      <button type="edit" class="button-edit" onclick="editData()">EDIT</button>
+      <form action="/search" method="get" style="display: flex;"></form> 
+      <input type="search" placeholder="Cari..." name="q" style="padding: 5px;;">
+      <button type="search" style="padding: 10px 20px;">SEARCH</button> 
+      <i class="fa fa-search"></i>
+    </button>
+    </form>
+  </div>
+
+  <div id="footer">
+    BRAGA HOLIDAY INDONESIA
+  </div>
+
+</body>
+</html>
