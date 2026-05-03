@@ -29,6 +29,13 @@
       border: 2px solid #f1d0d0;
       border-radius: 5px;
     }
+    #form-container select[type="pilihan"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #f1d0d0;
+      border-radius: 5px;
+     }
     #form-container input[type="submit"] {
       background-color: #1E90FF;
       color: #FFFFFF;
@@ -86,27 +93,98 @@
       <label for="id_booking">ID BOOKING :</label>
       <input type="text" id="id_booking" name="id_booking" required>
       <label for="area">AREA :</label>
-      <input type="text" id="area" name="area" required>
+      <select type="pilihan" name="pilihan" required>
+      <option value="" disabled selected>--Pilih--</option>
+      <option value="bandung">BANDUNG</option>
+      <option value="jakarta">JAKARTA / AIRPORT</option>
+      <option value="yogyakarta">YOGYAKARTA</option>
+      <option value="surabaya">SURABAYA</option>
+      <option value="bali">BALI</option>
+      </select>
       <label for="nama_tamu">NAMA TAMU :</label>
       <input type="text" id="nama_tamu" name="nama_tamu" required>
       <label for="no_hp">NOMOR HANDPHONE :</label>
       <input type="tel" id="no_hp" name="no_hp" pattern="[0-9]{10,12}" required>
       <label for="type_kendaraan">TYPE KENDARAAN :</label>
-      <input type="text" id="type_kendaraan" name="type_kendaraan" required>
+      <select type="pilihan" name="pilihan" required>
+      <option value="" disabled selected>--Pilih--</option>
+      <option value="city">CITY CAR</option>
+      <option value="family">FAMILY CAR</option>
+      <option value="comfort">COMFORT CAR</option>
+      <option value="hiace">HIACE COMMUTER</option>
+      <option value="elf">ELF GIGA</option>
+      <option value="bus">BUS</option>
+      <option value="economy">ECONOMY CAR</option>
+      </select>
       <label for="nama_driver">NAMA DRIVER :</label>
       <input type="text" id="nama_driver" name="nama_driver" required>
       <label for="jumlah_hari">JUMLAH HARI :</label>
-      <input type="text" id="jumlah_hari" name="jumlah_hari" required>
+      <input type="number" id="jumlah_hari" name="jumlah_hari" required>
       <label for="keterangan_lokasi">KETERANGAN LOKASI :</label>
       <input type="text" id="keterangan_lokasi" name="keterangan_lokasi" required>
       <label for="jumlah_pax">JUMLAH PAX :</label>
-      <input type="text" id="jumlah_pax" name="jumlah_pax" required>
+      <input type="number" id="jumlah_pax" name="jumlah_pax" required>
       <label for="pickup_time">PICKUP TIME :</label>
       <input type="time" id="pickup_time" name="pickup_time" required>
       <label for="pickup_location">PICKUP LOCATION :</label>
-      <input type="text" id="pickup_location" name="pickup_location" required>
+      <select type="pilihan" name="pilihan" required>
+      <option value="" disabled selected>--Pilih--</option>
+      <option value="bandung_stasiun">BANDUNG STASIUN WOOSH </option>
+      <option value="bandung_hotel">BANDUNG HOTEL</option>
+      <option value="jakarta">JAKARTA / AIRPORT</option>
+      <option value="jakarta_stasiun">JAKARTA STASIUN WOOSH</option>
+      <option value="yogyakarta">YOGYAKARTA</option>
+      <option value="surabaya">SURABAYA</option>
+      <option value="bali">BALI</option>
+       <option value="Lainnya">Lainnya</option>
+      </select>
+      <input type="text" id="inputLainnya" placeholder="Tuliskan Lokasi Lainnya...">
+
+    <script>
+        function tampilInputLain(nilai) {
+            var inputLain = document.getElementById("inputLainnya");
+            
+            // Cek jika opsi yang dipilih adalah "Lainnya"
+            if (nilai === "Lainnya") {
+                inputLain.style.display = "block"; // Tampilkan input
+                inputLain.setAttribute("required", "required"); // Jadikan wajib diisi
+            } 
+            else {
+                inputLain.style.display = "none";  // Sembunyikan input
+                inputLain.removeAttribute("required");
+                inputLain.value = ""; // Bersihkan nilai input
+            }
+        }
+    </script>
       <label for="dropoff_location">DROPOFF LOCATION :</label>
-      <input type="text" id="dropoff_location" name="dropoff_location" required>
+      <select type="pilihan" name="pilihan" required>
+      <option value="" disabled selected>--Pilih--</option>
+      <option value="bandung_stasiun">BANDUNG STASIUN WOOSH </option>
+      <option value="bandung_hotel">BANDUNG HOTEL</option>
+      <option value="jakarta">JAKARTA / AIRPORT</option>
+      <option value="jakarta_stasiun">JAKARTA STASIUN WOOSH</option>
+      <option value="yogyakarta">YOGYAKARTA</option>
+      <option value="surabaya">SURABAYA</option>
+      <option value="bali">BALI</option>
+       <option value="Lainnya">Lainnya</option>
+      </select>
+      <input type="text" id="inputLainnya" placeholder="Tuliskan Lokasi Lainnya...">
+    <script>
+        function tampilInputLain(nilai) {
+            var inputLain = document.getElementById("inputLainnya");
+            
+            // Cek jika opsi yang dipilih adalah "Lainnya"
+            if (nilai === "Lainnya") {
+                inputLain.style.display = "block"; // Tampilkan input
+                inputLain.setAttribute("required", "required"); // Jadikan wajib diisi
+            } 
+            else {
+                inputLain.style.display = "none";  // Sembunyikan input
+                inputLain.removeAttribute("required");
+                inputLain.value = ""; // Bersihkan nilai input
+            }
+        }
+    </script>
       <label for="total_tagihan">TOTAL TAGIHAN :</label>
       <input type="number" id="total_tagihan" name="total_tagihan" required>
       <label for="deposit">DEPOSIT :</label>
@@ -133,3 +211,4 @@
 
 </body>
 </html>
+
