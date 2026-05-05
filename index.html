@@ -22,7 +22,7 @@
       text-align: center;
       color: #d88406;
     }
-    #form-container input[type="text"], #form-container input[type="date"], #form-container input[type="tel"], #form-container input[type="number"],#form-container input[type="time"] {
+    #form-container input[type="text"], #form-container input[type="date"], #form-container select[type="pilihan"], #form-container input[type="tel"], #form-container input[type="number"],#form-container input[type="time"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 20px;
@@ -93,28 +93,28 @@
       <label for="id_booking">ID BOOKING :</label>
       <input type="text" id="id_booking" name="id_booking" required>
       <label for="area">AREA :</label>
-      <select type="pilihan" name="pilihan" required>
+      <select type="pilihan" id="area" name="area" required>
       <option value="" disabled selected>--Pilih--</option>
-      <option value="bandung">BANDUNG</option>
-      <option value="jakarta">JAKARTA / AIRPORT</option>
-      <option value="yogyakarta">YOGYAKARTA</option>
-      <option value="surabaya">SURABAYA</option>
-      <option value="bali">BALI</option>
+      <option value="BANDUNG">BANDUNG</option>
+      <option value="JAKARTA / AIRPORT">JAKARTA / AIRPORT</option>
+      <option value="YOGYAKARTA">YOGYAKARTA</option>
+      <option value="SURABAYA">SURABAYA</option>
+      <option value="BALI">BALI</option>
       </select>
       <label for="nama_tamu">NAMA TAMU :</label>
       <input type="text" id="nama_tamu" name="nama_tamu" required>
       <label for="no_hp">NOMOR HANDPHONE :</label>
-      <input type="tel" id="no_hp" name="no_hp" pattern="[0-9]{10,12}" required>
+      <input type="tel" id="no_hp" name="no_hp" pattern="[0-9]{10,12,13}" required>
       <label for="type_kendaraan">TYPE KENDARAAN :</label>
-      <select type="pilihan" name="pilihan" required>
+      <select type="pilihan" id="type_kendaraan" name="type_kendaraan" required>
       <option value="" disabled selected>--Pilih--</option>
-      <option value="city">CITY CAR</option>
-      <option value="family">FAMILY CAR</option>
-      <option value="comfort">COMFORT CAR</option>
-      <option value="hiace">HIACE COMMUTER</option>
-      <option value="elf">ELF GIGA</option>
-      <option value="bus">BUS</option>
-      <option value="economy">ECONOMY CAR</option>
+      <option value="CITY CAR">CITY CAR</option>
+      <option value="FAMILY CAR">FAMILY CAR</option>
+      <option value="COMFORT CAR">COMFORT CAR</option>
+      <option value="HIACE COMMUTER">HIACE COMMUTER</option>
+      <option value="ELF GIGA">ELF GIGA</option>
+      <option value="BUS">BUS</option>
+      <option value="ECONOMY CAR">ECONOMY CAR</option>
       </select>
       <label for="nama_driver">NAMA DRIVER :</label>
       <input type="text" id="nama_driver" name="nama_driver" required>
@@ -127,29 +127,29 @@
       <label for="pickup_time">PICKUP TIME :</label>
       <input type="time" id="pickup_time" name="pickup_time" required>
       <label for="pickup_location">PICKUP LOCATION :</label>
-      <select type="pilihan" name="pilihan" required>
+      <select type="pilihan" id="pickup_location" name="pickup_location" required>
       <option value="" disabled selected>--Pilih--</option>
-      <option value="bandung_stasiun">BANDUNG STASIUN WOOSH </option>
-      <option value="bandung_hotel">BANDUNG HOTEL</option>
-      <option value="jakarta">JAKARTA / AIRPORT</option>
-      <option value="jakarta_stasiun">JAKARTA STASIUN WOOSH</option>
-      <option value="yogyakarta">YOGYAKARTA</option>
-      <option value="surabaya">SURABAYA</option>
-      <option value="bali">BALI</option>
-      <option value="lainnya">LAINNYA</option>
+      <option value="BANDUNG STASIUN WOOSH">BANDUNG STASIUN WOOSH </option>
+      <option value="BANDUNG HOTEL">BANDUNG HOTEL</option>
+      <option value="JAKARTA / AIRPORT">JAKARTA / AIRPORT</option>
+      <option value="JAKARTA STASIUN WOOSH">JAKARTA STASIUN WOOSH</option>
+      <option value="YOGYAKARTA">YOGYAKARTA</option>
+      <option value="SURABAYA">SURABAYA</option>
+      <option value="BALI">BALI</option>
+      <option value="LAINNYA">LAINNYA</option>
       </select>
       <input type="text" id="inputLainnya" placeholder="Tuliskan Lokasi Lainnya..." >
       <label for="dropoff_location">DROPOFF LOCATION :</label>
-      <select type="pilihan" name="pilihan" required>
+      <select type="pilihan" id="dropoff_location" name="dropoff_location" required>
       <option value="" disabled selected>--Pilih--</option>
-      <option value="bandung_stasiun">BANDUNG STASIUN WOOSH </option>
-      <option value="bandung_hotel">BANDUNG HOTEL</option>
-      <option value="jakarta">JAKARTA / AIRPORT</option>
-      <option value="jakarta_stasiun">JAKARTA STASIUN WOOSH</option>
-      <option value="yogyakarta">YOGYAKARTA</option>
-      <option value="surabaya">SURABAYA</option>
-      <option value="bali">BALI</option>
-       <option value="lainnya">LAINNYA</option>
+      <option value="BANDUNG STASIUN WOOSH">BANDUNG STASIUN WOOSH </option>
+      <option value="BANDUNG HOTEL">BANDUNG HOTEL</option>
+      <option value="JAKARTA / AIRPORT">JAKARTA / AIRPORT</option>
+      <option value="JAKARTA STASIUN WOOSH">JAKARTA STASIUN WOOSH</option>
+      <option value="YOGYAKARTA">YOGYAKARTA</option>
+      <option value="SURABAYA">SURABAYA</option>
+      <option value="BALI">BALI</option>
+       <option value="LAINNYA">LAINNYA</option>
       </select>
       <input type="text" id="inputLainnya" placeholder="Tuliskan Lokasi Lainnya...">
       <label for="total_tagihan">TOTAL TAGIHAN :</label>
@@ -163,10 +163,10 @@
       <label for="keterangan">KETERANGAN :</label>
       <input type="text" id="keterangan" name="keterangan" required>
       <input type="submit" value="SIMPAN DATA">
-      <button type="edit" class="button-edit" onclick="editData()">EDIT</button>
-      <form action="/search" method="get" style="display: flex;"></form> 
+      <button type="edit" value="EDIT DATA"class="button-edit" onclick="editData()">EDIT</button>
+      <form action="/search" method="get" style="display: flex;"></form>
       <input type="search" placeholder="Cari..." name="q" style="padding: 5px;;">
-      <button type="search" style="padding: 10px 20px;">SEARCH</button> 
+      <button type="search" style="padding: 10px 20px;">SEARCH</button>
       <i class="fa fa-search"></i>
     </button>
     </form>
